@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    "pages/im/im",
+    "pages/im/room/room",
+    "pages/order/order",
+    "pages/persion/persion",
+    "pages/main/searchView/searchView"
+  ],
+  "window": {
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "易点美食",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false,
+    "navigationStyle": "default" 
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#D81E06",
+    "list": [
+      {
+        "pagePath": "pages/main/main",
+        "text": "首页",
+        "iconPath": "images/main_default.png",
+        "selectedIconPath": "images/main_select.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath": "images/order_default.png",
+        "selectedIconPath": "images/order_select.png"
+      },
+      {
+        "pagePath": "pages/persion/persion",
+        "text": "我",
+        "iconPath": "images/user_default.png",
+        "selectedIconPath": "images/user_select.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

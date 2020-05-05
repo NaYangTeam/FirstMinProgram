@@ -1,0 +1,24 @@
+<!--main.wxml-->
+<scroll-view class="container">
+  <button class="home-input home-input-width" hover-class="none" bindtap="onClikc">我饿了</button>
+  <swiper class="ad-swiper" indicator-dots="{{indicatorDots}}" autoplay="true" duration="1000">
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item}}" mode="aspectFit"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="category-menu-parent">
+    <block wx:for="{{categoryMenu}}" wx:key="this">
+      <view class="category-menu-inner category-menu" >
+        <image class="category-menu-img" src="{{item.src}}"/>
+        <text class="category-menu-text">{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+  
+  <view>
+    
+  </view>
+
+</scroll-view>

@@ -1,0 +1,4 @@
+<!--pages/main/searchView/searchView.wxml-->
+<view>
+  <input class="home-input search-input-width" placeholder="我饿了" type="text" />
+</view>

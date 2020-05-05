@@ -1,0 +1,26 @@
+<view>
+  <swiper class="swipper"  style="display: none">
+    <swiper-item class="swipper-item" wx:for="{{adList}}" wx:key="{{item.id}}">
+      <image src="{{item.url}}"/>
+    </swiper-item>
+  </swiper>
+  <scroll-view bindscrolltoupper="onPullDownRefresh" bindscrolltolower="onReachBottom">
+    <view class="foodItem foodItem-content" wx:for="{{foodList}}" wx:for-index="index" wx:key="id" data-id="{{item.id}}" bindtap="listItemTap">
+      <image class="foodItem-avatar" src="/images/icon_add.png"/>
+        <view class="foodItem-foodInfo">
+          <text style="display: none">{{item.id}}</text>
+          <text class="foodItem-foodInfo-title single-line">{{item.title}}</text>
+          <text class="foodItem-foodInfo-content mulit-line ">{{item.description}}</text>
+          <text class="foodItem-foodInfo-content">{{item.salesAndLikeInfo}}</text>
+          <view class="horizontal-view .foodItem-price-label">
+            <text class="foodItem-price">¥{{item.price}}</text>
+            <view class="foodItem-number-content .horizontal-view">
+              <image class="foodItem-number-option" catchtap="numberReduce" data-index="{{index}}" data-food="{{item}}" src="/images/icon_reduce.png"/>
+              <input class="foodItem-number-input"  bindinput="numberChange" type="number" maxlength="2" value="{{item.number}}"/>
+              <image class="foodItem-number-option" catchtap="numberAdd" data-index="{{index}}" data-food="{{item}}" src="/images/icon_add.png"/>
+            </view>
+          </view>
+        </view>
+    </view>
+  </scroll-view>
+</view>
